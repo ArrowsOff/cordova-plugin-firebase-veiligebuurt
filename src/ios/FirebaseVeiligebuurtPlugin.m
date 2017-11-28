@@ -9,7 +9,7 @@
     [FIROptions defaultOptions].deepLinkURLScheme = [FIROptions defaultOptions].bundleID;
 
     // if(![FIRApp defaultApp]) {
-        [FIRApp configure];
+    [FIRApp configure];
     // }
 }
 
