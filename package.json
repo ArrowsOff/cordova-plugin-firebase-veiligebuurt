@@ -1,5 +1,5 @@
 {
-  "name": "FirebaseVeiligebuurt",
+  "name": "cordova-plugin-firebase-veiligebuurt",
   "version": "0.0.1",
   "description": "A plugin for determining if the user has an appointment coming up shortly",
   "cordova": {
