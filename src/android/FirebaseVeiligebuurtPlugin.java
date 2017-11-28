@@ -41,22 +41,22 @@ public class FirebaseVeiligebuurtPlugin extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if ("logEvent".equals(action)) {
-            logEvent(callbackContext, args.getString(0), args.getJSONObject(1));
+            this.logEvent(callbackContext, args.getString(0), args.getJSONObject(1));
             return true;
         } else if ("logError".equals(action)) {
-            logError(callbackContext, args.getString(0));
+            this.logError(callbackContext, args.getString(0));
             return true;
         } else if ("setUserId".equals(action)) {
-            setUserId(callbackContext, args.getString(0));
+            this.setUserId(callbackContext, args.getString(0));
             return true;
         } else if ("setUserProperty".equals(action)) {
-            setUserProperty(callbackContext, args.getString(0), args.getString(1));
+            this.setUserProperty(callbackContext, args.getString(0), args.getString(1));
             return true;
         } else if ("setEnabled".equals(action)) {
-            setEnabled(callbackContext, args.getBoolean(0));
+            this.setEnabled(callbackContext, args.getBoolean(0));
             return true;
         } else if ("setCurrentScreen".equals(action)) {
-            setCurrentScreen(callbackContext, args.getString(0));
+            this.setCurrentScreen(callbackContext, args.getString(0));
             return true;
         }
 
@@ -134,7 +134,7 @@ public class FirebaseVeiligebuurtPlugin extends CordovaPlugin {
         cordova.getThreadPool().execute(new Runnable() {
             public void run() {
                 try {
-                    this.mFirebaseAnalytics.setAnalyticsCollectionEnabled(enabled);
+                    mFirebaseAnalytics.setAnalyticsCollectionEnabled(enabled);
                     callbackContext.success();
                 } catch (Exception e) {
                     callbackContext.error(e.getMessage());
