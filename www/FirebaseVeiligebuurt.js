@@ -1,5 +1,5 @@
 var exec = require('cordova/exec');
-var PLUGIN_NAME = "firebase-veiligebuurt";
+var PLUGIN_NAME = "FirebaseVeiligebuurt";
 
 module.exports = {
     logEvent: function(name, params) {
