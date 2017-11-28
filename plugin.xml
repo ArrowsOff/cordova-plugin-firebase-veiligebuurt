@@ -27,6 +27,7 @@
 			</feature>
 		</config-file>
 
+		<!-- Receivers for AppMeasurement -->
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService" />
 		
@@ -35,6 +36,14 @@
 					<action android:name="com.google.android.gms.measurement.UPLOAD" />
 				</intent-filter>
 			</receiver>
+		</config-file>
+
+		<!-- Define variables for replacing later -->
+		<config-file parent="/resources" target="res/values/strings.xml">
+			<string name="google_app_id">@string/google_app_id</string>
+		</config-file>
+		<config-file parent="/resources" target="res/values/strings.xml">
+			<string name="google_api_key">@string/google_api_key</string>
 		</config-file>
 		
 		<config-file parent="/*" target="AndroidManifest.xml" />
