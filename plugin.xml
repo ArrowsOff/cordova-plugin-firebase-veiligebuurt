@@ -84,6 +84,6 @@
 		<framework src="Firebase/Performance" type="podspec" spec="~> 4.1"/>
 	</platform>
 
-	<hook src="scripts/after_prepare.js" type="after_prepare" />
+	<!-- <hook src="scripts/after_prepare.js" type="after_prepare" /> -->
 
 </plugin>
