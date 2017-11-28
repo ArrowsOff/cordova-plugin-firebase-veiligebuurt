@@ -1,4 +1,4 @@
-#import "FirebaseVeiligebuurtPlugin.h"
+#import "firebase-veiligebuurt.h"
 @import Firebase;
 
 @implementation FirebaseVeiligebuurtPlugin
