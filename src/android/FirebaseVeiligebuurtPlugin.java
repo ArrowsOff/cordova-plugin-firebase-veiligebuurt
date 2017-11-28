@@ -130,7 +130,7 @@ public class FirebaseVeiligebuurtPlugin extends CordovaPlugin {
         });
     }
 
-    private void setEnabled(CallbackContext callbackContext, final boolean enabled) {
+    private void setEnabled(final CallbackContext callbackContext, final boolean enabled) {
         cordova.getThreadPool().execute(new Runnable() {
             public void run() {
                 try {
