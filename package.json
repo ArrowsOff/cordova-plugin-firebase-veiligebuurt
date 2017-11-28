@@ -1,7 +1,7 @@
 {
   "name": "cordova-plugin-firebase-veiligebuurt",
   "version": "0.0.1",
-  "description": "A plugin for determining if the user has an appointment coming up shortly",
+  "description": "A plugin for implementing Firebase without Messaging from Firebase",
   "cordova": {
     "id": "cordova-plugin-firebase-veiligebuurt",
     "platforms": [
@@ -9,7 +9,6 @@
       "ios"
     ]
   },
-  "keywords": [],
   "author": "Rick Beumers",
-  "license": "ISC"
+  "license": "MIT"
 }

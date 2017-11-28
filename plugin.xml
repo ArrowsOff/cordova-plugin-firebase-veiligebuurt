@@ -1,12 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="cordova-plugin-firebase-veiligebuurt" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-	<name>FirebaseVeiligebuurtPlugin</name>
-	
-	<js-module name="FirebaseVeiligebuurt" src="www/FirebaseVeiligebuurt.js">
-		<clobbers target="cordova.plugins.firebase-veiligebuurt" />
-	</js-module>
 
+	<name>FirebaseVeiligebuurtPlugin</name>
+	<description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/ArrowsOff/cordova-plugin-firebase-veiligebuurt.git</repo>
+    <issue>https://github.com/ArrowsOff/cordova-plugin-firebase-veiligebuurt/issues</issue>
+
+	<!-- Android Platform -->
 	<platform name="android">
+		<js-module name="FirebaseVeiligebuurt" src="www/FirebaseVeiligebuurt.js">
+			<runs/>
+			<!-- This is the window variable name you want, like window.MyCordovaPlugin -->
+			<clobbers target="FirebaseVeiligebuurt" />
+		</js-module>
+
+		<!-- Defined version for plugin -->
 		<preference name="FIREBASE_VERSION" default="11.+"/>
 
 		<config-file parent="/*" target="res/xml/config.xml">
@@ -25,7 +35,14 @@
         <framework src="com.google.firebase:firebase-perf:$FIREBASE_VERSION" />
 	</platform>
 
+	<!-- iOS Platform -->
 	<platform name="ios">
+		<js-module name="FirebaseVeiligebuurt" src="www/FirebaseVeiligebuurt.js">
+			<runs/>
+			<!-- This is the window variable name you want, like window.MyCordovaPlugin -->
+			<clobbers target="FirebaseVeiligebuurt" />
+		</js-module>
+
 		<config-file parent="/*" target="config.xml">
 			<feature name="FirebaseVeiligebuurt">
 				<param name="ios-package" value="FirebaseVeiligebuurtPlugin" />
