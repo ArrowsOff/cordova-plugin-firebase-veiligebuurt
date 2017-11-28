@@ -7,6 +7,11 @@ module.exports = {
             exec(resolve, reject, PLUGIN_NAME, "logEvent", [name, params || {}]);
         });
     },
+    logError: function(message) {
+        return new Promise(function(resolve, reject) {
+            exec(resolve, reject, PLUGIN_NAME, "logError", [message]);
+        });
+    },
     setUserId: function(userId) {
         return new Promise(function(resolve, reject) {
             exec(resolve, reject, PLUGIN_NAME, "setUserId", [userId]);
