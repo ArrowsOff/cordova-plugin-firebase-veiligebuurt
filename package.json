@@ -1,0 +1,15 @@
+{
+  "name": "FirebaseVeiligebuurt",
+  "version": "0.0.1",
+  "description": "A plugin for determining if the user has an appointment coming up shortly",
+  "cordova": {
+    "id": "cordova-plugin-firebase-veiligebuurt",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [],
+  "author": "Rick Beumers",
+  "license": "ISC"
+}
