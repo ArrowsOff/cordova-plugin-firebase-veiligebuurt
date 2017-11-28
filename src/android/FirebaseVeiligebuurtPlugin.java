@@ -148,7 +148,7 @@ public class FirebaseVeiligebuurtPlugin extends CordovaPlugin {
         cordova.getActivity().runOnUiThread(new Runnable() {
             public void run() {
                 try {
-                    mFirebaseAnalytics.setCurrentScreen(cordova.getActivity(), name, null);
+                    mFirebaseAnalytics.setCurrentScreen(cordova.getActivity(), screenName, null);
                     callbackContext.success();
                 } catch (Exception e) {
                     callbackContext.error(e.getMessage());
