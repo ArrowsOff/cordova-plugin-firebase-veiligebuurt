@@ -8,9 +8,9 @@
 
     [FIROptions defaultOptions].deepLinkURLScheme = [FIROptions defaultOptions].bundleID;
 
-    if(![FIRApp defaultApp]) {
+    // if(![FIRApp defaultApp]) {
         [FIRApp configure];
-    }
+    // }
 }
 
 - (void)logEvent:(CDVInvokedUrlCommand *)command {
