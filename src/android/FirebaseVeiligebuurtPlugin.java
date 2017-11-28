@@ -62,7 +62,7 @@ public class FirebaseVeiligebuurtPlugin extends CordovaPlugin {
 
         return false;
     }
-
+    
     private void logEvent(final CallbackContext callbackContext, final String name, final JSONObject params) throws JSONException {
         final Bundle bundle = new Bundle();
         Iterator iter = params.keys();
@@ -104,7 +104,7 @@ public class FirebaseVeiligebuurtPlugin extends CordovaPlugin {
         });
     }
 
-    private void setUserId(final CallbackContext callbackContext, final String userId) {
+    private void setUserId(final CallbackContext callbackContext, final String id) {
         cordova.getThreadPool().execute(new Runnable() {
             public void run() {
                 try {
