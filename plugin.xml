@@ -29,6 +29,8 @@
 		<config-file parent="/*" target="AndroidManifest.xml" />
 		<source-file src="src/android/FirebaseVeiligebuurtPlugin.java" target-dir="src/cordova-plugin-firebase-veiligebuurt/firebase-veiligebuurt" />
 
+		<framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+
 		<framework src="com.google.firebase:firebase-core:$FIREBASE_VERSION" />
         <framework src="com.google.firebase:firebase-crash:$FIREBASE_VERSION" />
         <framework src="com.google.firebase:firebase-config:$FIREBASE_VERSION" />
