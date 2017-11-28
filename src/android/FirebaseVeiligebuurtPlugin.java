@@ -62,7 +62,7 @@ public class FirebaseVeiligebuurtPlugin extends CordovaPlugin {
 
         return false;
     }
-    
+
     private void logEvent(final CallbackContext callbackContext, final String name, final JSONObject params) throws JSONException {
         final Bundle bundle = new Bundle();
         Iterator iter = params.keys();
@@ -108,7 +108,7 @@ public class FirebaseVeiligebuurtPlugin extends CordovaPlugin {
         cordova.getThreadPool().execute(new Runnable() {
             public void run() {
                 try {
-                    mFirebaseAnalytics.setUserId(userId);
+                    mFirebaseAnalytics.setUserId(id);
                     callbackContext.success();
                 } catch (Exception e) {
                     callbackContext.error(e.getMessage());
@@ -121,7 +121,7 @@ public class FirebaseVeiligebuurtPlugin extends CordovaPlugin {
         cordova.getThreadPool().execute(new Runnable() {
             public void run() {
                 try {
-                    mFirebaseAnalytics.setUserId(id);
+                    mFirebaseAnalytics.setUserProperty(name, value);
                     callbackContext.success();
                 } catch (Exception e) {
                     callbackContext.error(e.getMessage());
@@ -148,7 +148,7 @@ public class FirebaseVeiligebuurtPlugin extends CordovaPlugin {
         cordova.getActivity().runOnUiThread(new Runnable() {
             public void run() {
                 try {
-                    mFirebaseAnalytics.setCurrentScreen(cordova.getActivity(), screenName, null);
+                    mFirebaseAnalytics.setCurrentScreen(cordova.getActivity(), name, null);
                     callbackContext.success();
                 } catch (Exception e) {
                     callbackContext.error(e.getMessage());
