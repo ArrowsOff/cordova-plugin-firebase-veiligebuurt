@@ -104,11 +104,11 @@ public class FirebaseVeiligebuurtPlugin extends CordovaPlugin {
         });
     }
 
-    private void setUserId(final CallbackContext callbackContext, final String id) {
+    private void setUserId(final CallbackContext callbackContext, final String userId) {
         cordova.getThreadPool().execute(new Runnable() {
             public void run() {
                 try {
-                    mFirebaseAnalytics.setUserId(id);
+                    mFirebaseAnalytics.setUserId(userId);
                     callbackContext.success();
                 } catch (Exception e) {
                     callbackContext.error(e.getMessage());
