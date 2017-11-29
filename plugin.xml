@@ -37,14 +37,6 @@
 				</intent-filter>
 			</receiver>
 		</config-file>
-
-		<!-- Define variables for replacing later -->
-		<!-- <config-file parent="/resources" target="res/values/strings.xml">
-			<string name="google_app_id">@string/google_app_id</string>
-		</config-file>
-		<config-file parent="/resources" target="res/values/strings.xml">
-			<string name="google_api_key">@string/google_api_key</string>
-		</config-file> -->
 		
 		<config-file parent="/*" target="AndroidManifest.xml" />
 		<source-file src="src/android/FirebaseVeiligebuurtPlugin.java" 
@@ -57,6 +49,7 @@
         <framework src="com.google.firebase:firebase-crash:$FIREBASE_VERSION" />
         <framework src="com.google.firebase:firebase-perf:$FIREBASE_VERSION" />
 
+		<!-- This will add google-services.json -->
 		<dependency id="cordova-support-google-services" version="~1.0.0"/>
 	</platform>
 
@@ -83,7 +76,5 @@
 		<framework src="Firebase/RemoteConfig" type="podspec" spec="~> 4.1"/>
 		<framework src="Firebase/Performance" type="podspec" spec="~> 4.1"/>
 	</platform>
-
-	<!-- <hook src="scripts/after_prepare.js" type="after_prepare" /> -->
 
 </plugin>
